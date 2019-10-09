@@ -9,12 +9,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from './shared/shared.module';
 import { SideNavContentComponent } from './shared/components/side-nav-content/side-nav-content.component';
+import { FormsModule } from '@angular/forms';
+import { FilterPipe } from './core/pipes/filter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContentLayoutComponent,
-    SideNavContentComponent
+    SideNavContentComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
@@ -22,7 +25,8 @@ import { SideNavContentComponent } from './shared/components/side-nav-content/si
     LayoutModule,
     AppRoutingModule,
     HttpClientModule,
-    SharedModule
+    SharedModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
