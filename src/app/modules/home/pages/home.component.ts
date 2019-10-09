@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {WeatherService} from '../../../core/services/weather.service';
-import {Weather} from '../../../core/models/weather.model';
+import {CityWeather} from '../../../core/models/CityWeather.model';
 import {CityReaderService} from '../../../core/services/city-reader.service';
 
 @Component({
@@ -9,13 +9,13 @@ import {CityReaderService} from '../../../core/services/city-reader.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  currentWeather: Weather;
+  currentWeather: CityWeather;
   europeanCapitals: string[] = [];
 
   constructor(private weatherService: WeatherService, private cityReader: CityReaderService) {}
 
   ngOnInit() {
-    this.weatherService.getWeather('Budapest').subscribe((data: Weather) => {
+    this.weatherService.getCityWeather('Budapest').subscribe((data: CityWeather) => {
       console.log(data);
       this.currentWeather = data;
     });

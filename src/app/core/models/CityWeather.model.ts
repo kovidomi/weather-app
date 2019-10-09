@@ -1,4 +1,4 @@
-export class Weather {
+export class CityWeather {
   public coord: string;
   public weather: string;
   public base: string;
