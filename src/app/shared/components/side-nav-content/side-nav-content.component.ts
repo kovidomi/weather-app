@@ -8,8 +8,8 @@ import {WeatherApiService} from '../../../core/services/weather-api.service';
   styleUrls: ['./side-nav-content.component.css']
 })
 export class SideNavContentComponent implements OnInit {
-
   cities: string[] = [];
+  searchText: string;
 
   constructor(private cityReader: CityReaderService, private weatherService: WeatherApiService) { }
 

@@ -1,3 +1,4 @@
-<div *ngFor="let cityName of cities">
+<input type="text" name="city-search" [(ngModel)]="searchText">
+<div *ngFor="let cityName of cities | filter:searchText">
   <a mat-list-item (click)="onCityClick(cityName)">{{cityName}}</a>
 </div>
