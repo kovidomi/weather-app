@@ -1,4 +1,10 @@
-<input type="text" name="city-search" [(ngModel)]="searchText">
+<mat-form-field class="search-bar">
+  <input matInput type="text" placeholder="Search" [(ngModel)]="searchText">
+  <button mat-button *ngIf="searchText" matSuffix mat-icon-button aria-label="Clear" (click)="searchText=''">
+    <mat-icon>close</mat-icon>
+  </button>
+</mat-form-field>
+<mat-divider></mat-divider>
 <div *ngFor="let cityName of cities | textfilter:searchText">
   <a mat-list-item (click)="onCityClick(cityName)">{{cityName}}</a>
 </div>
