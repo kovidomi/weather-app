@@ -10,14 +10,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from './shared/shared.module';
 import { SideNavContentComponent } from './shared/components/side-nav-content/side-nav-content.component';
 import { FormsModule } from '@angular/forms';
-import { FilterPipe } from './core/pipes/filter.pipe';
+import { TextFilterPipe } from './core/pipes/textfilter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContentLayoutComponent,
     SideNavContentComponent,
-    FilterPipe
+    TextFilterPipe
   ],
   imports: [
     BrowserModule,
