@@ -94,7 +94,6 @@ export class WeatherComponent implements OnInit {
   private getCityWeatherByName(cityName) {
     this.weatherApiService.getCityWeather(cityName).subscribe((cityWeather: CityWeather) => {
       this.cityWeather = cityWeather;
-      console.log(this.cityWeather);
     });
   }
 

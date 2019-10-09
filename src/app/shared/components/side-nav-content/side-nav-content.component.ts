@@ -21,7 +21,6 @@ export class SideNavContentComponent implements OnInit {
 
   onCityClick(city: string) {
     this.weatherService.selectedCityChanged.emit(city);
-    console.log(city);
   }
 
 }
