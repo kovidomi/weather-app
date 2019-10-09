@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {WeatherApiService} from '../../../core/services/weather-api.service';
-import {CityWeather} from '../../../core/models/CityWeather.model';
 
 @Component({
   selector: 'app-home',
@@ -8,16 +6,9 @@ import {CityWeather} from '../../../core/models/CityWeather.model';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  currentCity: CityWeather;
 
-  constructor(private weatherService: WeatherApiService) {}
+  constructor() {}
 
-  ngOnInit() {
-    this.weatherService.selectedCityChanged.subscribe(city => {
-      this.weatherService.getCityWeather(city).subscribe((data: CityWeather) => {
-        this.currentCity = data;
-      });
-    });
-  }
+  ngOnInit() {}
 
 }

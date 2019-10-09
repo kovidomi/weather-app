@@ -1,0 +1,18 @@
+<p>
+  {{cityWeather.name}}
+  <br>
+  {{getTemperature(cityWeather?.main.temp)}}
+  <br>
+  {{getWeatherDescription(cityWeather?.weather[0].description)}}
+  <br>
+  {{getHumidity(cityWeather?.main.humidity)}}
+  <br>
+  {{getPressure(cityWeather?.main.pressure)}}
+  <br>
+  {{getDateFromTimeStamp(cityWeather?.dt)}}
+  <br>
+  {{getWindSpeed(cityWeather?.wind.speed)}}
+  <br>
+  {{getWindDirection(cityWeather?.wind.deg)}}
+  <br>
+</p>
