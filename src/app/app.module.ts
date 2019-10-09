@@ -20,13 +20,13 @@ import { TextFilterPipe } from './core/pipes/textfilter.pipe';
     TextFilterPipe
   ],
   imports: [
+    SharedModule,
     BrowserModule,
     BrowserAnimationsModule,
     LayoutModule,
     AppRoutingModule,
     HttpClientModule,
-    SharedModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
