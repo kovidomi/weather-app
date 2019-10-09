@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {WeatherService} from '../../../core/services/weather.service';
+import {WeatherApiService} from '../../../core/services/weather-api.service';
 import {CityWeather} from '../../../core/models/CityWeather.model';
 
 @Component({
@@ -10,7 +10,7 @@ import {CityWeather} from '../../../core/models/CityWeather.model';
 export class HomeComponent implements OnInit {
   currentCity: CityWeather;
 
-  constructor(private weatherService: WeatherService) {}
+  constructor(private weatherService: WeatherApiService) {}
 
   ngOnInit() {
     this.weatherService.selectedCityChanged.subscribe(city => {

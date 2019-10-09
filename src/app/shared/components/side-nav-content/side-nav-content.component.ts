@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {CityReaderService} from '../../../core/services/city-reader.service';
-import {WeatherService} from '../../../core/services/weather.service';
+import {WeatherApiService} from '../../../core/services/weather-api.service';
 
 @Component({
   selector: 'app-side-nav-content',
@@ -11,7 +11,7 @@ export class SideNavContentComponent implements OnInit {
 
   cities: string[] = [];
 
-  constructor(private cityReader: CityReaderService, private weatherService: WeatherService) { }
+  constructor(private cityReader: CityReaderService, private weatherService: WeatherApiService) { }
 
   ngOnInit() {
     this.cityReader.getEuropeanCities().subscribe((data) => {
