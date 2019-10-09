@@ -8,11 +8,13 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from './shared/shared.module';
+import { SideNavContentComponent } from './shared/components/side-nav-content/side-nav-content.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ContentLayoutComponent
+    ContentLayoutComponent,
+    SideNavContentComponent
   ],
   imports: [
     BrowserModule,
