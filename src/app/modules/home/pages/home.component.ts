@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {WeatherService} from '../../../core/services/weather.service';
+import {Weather} from '../../../core/models/weather.model';
 
 @Component({
   selector: 'app-home',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  currentWeather: Weather;
 
-  constructor() { }
+  constructor(private weatherService: WeatherService) { }
 
   ngOnInit() {
+    this.weatherService.getWeather().subscribe((data: Weather) => {
+      console.log(data);
+      this.currentWeather = data;
+    });
   }
 
 }
