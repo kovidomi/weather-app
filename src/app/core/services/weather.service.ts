@@ -5,14 +5,11 @@ import {HttpClient} from '@angular/common/http';
   providedIn: 'root'
 })
 export class WeatherService {
-  apiUrl: string  = 'http://api.openweathermap.org/data/2.5/weather';
-  API_KEY: string = '33e92f887f3c3663797c4f3d30dd1e27';
-  city = 'Budapest';
+  private apiUrl: string  = 'http://api.openweathermap.org/data/2.5/weather';
+  private API_KEY: string = '33e92f887f3c3663797c4f3d30dd1e27';
 
-  finalUrl: string = this.apiUrl + '?q=' + this.city + '&appid=' + this.API_KEY;
-
-  public getWeather() {
-    return this.httpClient.get(this.finalUrl);
+  public getWeather(city: string) {
+    return this.httpClient.get(this.apiUrl + '?q=' + city + '&appid=' + this.API_KEY);
   }
 
   constructor(private httpClient: HttpClient) { }
