@@ -39,6 +39,10 @@ export class WeatherComponent implements OnInit {
     return humidity + ' %';
   }
 
+  getCloudiness(cloudiness): string {
+    return cloudiness + ' %';
+  }
+
   getPressure(pressure): string {
     return pressure + ' hPa';
   }

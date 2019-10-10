@@ -16,7 +16,7 @@
     <div class="description">
       {{getWeatherDescription(cityWeather?.weather[0].description)}}
     </div>
-    <fa-icon icon="cloud" size="2x"></fa-icon> {{cityWeather?.clouds.all}}
+    <fa-icon icon="cloud" size="2x"></fa-icon> {{getCloudiness(cityWeather?.clouds.all)}}
   </div>
 </div>
 
