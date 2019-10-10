@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {CityReaderService} from '../../../core/services/city-reader.service';
 import {WeatherApiService} from '../../../core/services/weather-api.service';
 
@@ -8,6 +8,8 @@ import {WeatherApiService} from '../../../core/services/weather-api.service';
   styleUrls: ['./side-nav-content.component.css']
 })
 export class SideNavContentComponent implements OnInit {
+  @Output() cityChanged: EventEmitter<void> = new EventEmitter<void>();
+
   cities: string[] = [];
   searchText: string;
 
@@ -21,6 +23,7 @@ export class SideNavContentComponent implements OnInit {
 
   onCityClick(city: string) {
     this.weatherService.selectedCityChanged.emit(city);
+    this.cityChanged.emit();
   }
 
 }

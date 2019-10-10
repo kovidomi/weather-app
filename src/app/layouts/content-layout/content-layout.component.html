@@ -19,7 +19,14 @@
                [ngClass]="{'sidenav-mobile': (isHandset$ | async)}">
     <mat-toolbar>Cities</mat-toolbar>
     <mat-nav-list>
-      <app-side-nav-content></app-side-nav-content>
+
+      <div *ngIf="(isHandset$ | async) else notHandset">
+        <app-side-nav-content (cityChanged)="drawer.close()"></app-side-nav-content>
+      </div>
+      <ng-template #notHandset>
+        <app-side-nav-content></app-side-nav-content>
+      </ng-template>
+
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
