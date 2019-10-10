@@ -1,5 +1,6 @@
 .row {
   display: inline-block;
+  margin-bottom: 10px;
 }
 
 .main-temp {
@@ -9,7 +10,7 @@
 
 .min-max-temp {
   width: 80px;
-  margin-right: 115px;
+  margin-right: 100px;
 }
 
 .description, .wind-direction{
@@ -18,7 +19,7 @@
 }
 
 .humidity {
-  margin-right: 160px;
+  margin-right: 145px;
 }
 
 .humidity-pressure {
