@@ -1,18 +1,41 @@
-<p>
-  {{cityWeather?.name}}
-  <br>
-  {{getTemperature(cityWeather?.main.temp)}}
-  <br>
-  {{getWeatherDescription(cityWeather?.weather[0].description)}}
-  <br>
-  {{getHumidity(cityWeather?.main.humidity)}}
-  <br>
-  {{getPressure(cityWeather?.main.pressure)}}
-  <br>
-  {{getDateFromTimeStamp(cityWeather?.dt)}}
-  <br>
-  {{getWindSpeed(cityWeather?.wind.speed)}}
-  <br>
-  {{getWindDirection(cityWeather?.wind.deg)}}
-  <br>
-</p>
+<h1>
+  {{cityWeather?.name}} ({{cityWeather?.sys.country}})
+</h1>
+<div class="temperature">
+  <h2 class="row main-temp">
+    {{getTemperature(cityWeather?.main.temp)}}
+  </h2>
+  <div class="row min-max-temp">
+    <div>
+      <fa-icon icon="caret-up"></fa-icon> {{getTemperature(cityWeather?.main.temp_max)}}
+    </div>
+    <fa-icon icon="caret-down"></fa-icon> {{getTemperature(cityWeather?.main.temp_min)}}
+  </div>
+
+  <div class="row">
+    <div class="description">
+      {{getWeatherDescription(cityWeather?.weather[0].description)}}
+    </div>
+    <fa-icon icon="cloud" size="2x"></fa-icon> {{cityWeather?.clouds.all}}
+  </div>
+</div>
+
+<div class = "humidity-pressure">
+  <div class="row humidity">
+    <div>
+      Humidity: {{getHumidity(cityWeather?.main.humidity)}}
+    </div>
+    Pressure: {{getPressure(cityWeather?.main.pressure)}}
+  </div>
+  <div class="row">
+    <fa-icon icon="wind" size="2x"></fa-icon> {{getWindSpeed(cityWeather?.wind.speed)}}
+    <span class="wind-direction">{{getWindDirection(cityWeather?.wind.deg) }}</span>
+  </div>
+</div>
+
+<div class="row">
+  <span class="sunrise">
+    <fa-icon icon="sun" size="2x"></fa-icon> {{getDateFromTimeStamp(cityWeather?.sys.sunrise)}}
+  </span>
+</div>
+<fa-icon icon="moon" size="2x"></fa-icon> {{getDateFromTimeStamp(cityWeather?.sys.sunset)}}

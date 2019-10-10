@@ -1,0 +1,34 @@
+.row {
+  display: inline-block;
+}
+
+.main-temp {
+  width: 90px;
+  margin-right: 10px;
+}
+
+.min-max-temp {
+  width: 80px;
+  margin-right: 115px;
+}
+
+.description, .wind-direction{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.humidity {
+  margin-right: 160px;
+}
+
+.humidity-pressure {
+  margin-bottom: 30px;
+}
+
+.temperature {
+  margin-bottom: 10px;
+}
+
+.sunrise {
+  margin-right: 25px;
+}
