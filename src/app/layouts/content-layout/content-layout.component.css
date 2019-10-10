@@ -22,8 +22,7 @@
   border-radius: 17px;
   padding: 20px;
   box-shadow: 10px 10px 14px 0 rgba(0, 0, 0, 0.75);
-  background: linear-gradient(135deg, rgba(226,226,226,0.41) 0%, rgba(209,209,209,0.41) 1%,
-    rgba(209,209,209,0.41) 2%, rgba(219,219,219,0.4) 5%, rgba(254,254,254,0.2) 100%);
+  background: linear-gradient(135deg, rgba(255,255,255,0.55) 0%, rgba(246,246,246,0.55) 47%, rgba(237,237,237,0.54) 100%);
 }
 
 .mat-drawer-container {
