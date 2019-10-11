@@ -10,7 +10,7 @@
 
 .min-max-temp {
   width: 80px;
-  margin-right: 90px;
+  margin-right: 85px;
 }
 
 .description, .wind-direction{
@@ -19,7 +19,7 @@
 }
 
 .humidity {
-  margin-right: 135px;
+  margin-right: 130px;
 }
 
 .sunrise {
